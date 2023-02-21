@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Opacity & Gradients</title>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        height: 100%;
+        /* viewport'un 100% üdür */
+      }
+
+      body {
+        margin: 0px;
+      }
+
+      #header {
+        position: relative;
+        background-image: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 0, 0.295),
+            rgba(255, 166, 0, 0.322),
+            rgba(255, 0, 0, 0.753)
+          ),
+          url("pexels-maxime-francis-2246476.jpg");
+        /* background: url("pexels-maxime-francis-2246476.jpg"); */
+        /* arka plana resim koymak yerine renk koymak istersen background
+        özelliğini yorum satırı yap. */
+        height: 50vh; /* 50% ile aynı anlama gelir 50vh. vh:viewport height. */
+        /* ekran boyutu küçüldükçe arka plan sabit kalıyordu. arka planın ekranla
+            aynı oranda küçülmesi için belli bir oran verdim. ama sadece oran verince
+            çalışmadı çünkü içinde bulunduğu bir kapsayıcı eleman var. bu eleman
+            body'dir. body'ye bulduğu tüm alanı kaplaması için 100% yükseklik verdim
+            fakat bu sefer de işe yaramadı çünkü body'nin de içinde bulunduğu bir kapsayıcı
+            eleman var. bu eleman da html. html'e 100% verince header 50% alan kaplayabildi.
+            ekran boyutu ne olursa olsun yarısını header arka planı kaplar eğer height 50% ise */
+      }
+
+      #header h1 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 80px;
+        color: rgb(98, 0, 255);
+        
+      }
+
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 70px;
+      }
+
+      .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* background-color: hotpink;
+        arka plan rengi için color diyoruz fakat gradient eklemek için 
+        image dememiz gerekiyor. */
+        /* background-image: linear-gradient(to bottom right,  yellow, blue, purple); */
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Background Text</h1>
+      <img class="logo" src="SEVRO49-2.png" alt="" />
+      <div class="cover"></div>
+    </div>
+  </body>
+</html>

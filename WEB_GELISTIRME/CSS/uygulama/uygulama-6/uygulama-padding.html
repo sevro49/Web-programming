@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uygulama - Padding</title>
+    <!-- 
+        !font ekleme
+     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
+        !font ekleme
+     -->
+    <script
+      src="https://kit.fontawesome.com/7b47ec1b74.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0px;
+        /** 
+        * !Font kullanma 
+        */
+        font-family: "Lato", sans-serif;
+      }
+
+      .main-header {
+        background-color: steelblue;
+        padding: 10px;
+      }
+
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 85px);
+        text-align: right;
+      }
+
+      .main-nav__items {
+        margin: 0px;
+      }
+
+      .main-nav__item a:hover,
+      .main-nav__item:hover::before {
+        color: darkblue;
+      }
+
+      .main-nav__item::before {
+        content: "\2022";
+        color: white;
+      }
+
+      .main-nav__item--login a {
+        color: steelblue;
+        padding: 6px 18px;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+      }
+
+      .main-nav__item--login a:hover {
+        background-color: aqua;
+        color: rgb(255, 8, 8);
+      }
+
+      .main-nav__item--login::before {
+        content: none;
+      }
+
+      .main-nav__item {
+        display: inline-block;
+        margin-left: 15px;
+        padding: 5px;
+      }
+
+      #showcase {
+        width: 100%;
+        height: 500px;
+        padding: 10px;
+        background: url("712390.jpg");
+        background-position: center;
+        background-size: 700px;
+      }
+
+      #how-it-works {
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      #how-it-works h2,
+      h3 {
+        color: #3e4555;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .row {
+        margin-bottom: 40px;
+      }
+
+      .col-3 {
+        width: 32%;
+        display: inline-block;
+
+        padding: 15px;
+        margin: 8px;
+      }
+
+      .col-2 {
+        display: inline-block;
+        width: calc(50% - 2px);
+        height: 350px;
+      }
+
+      .features__left {
+        background-image: url("features.jpeg");
+        background-size: cover;
+      }
+
+      .features__right {
+        background-color: rgb(146, 171, 190);
+        padding: 40px;
+        vertical-align: top;
+      }
+
+      .features__right h3 {
+        font-size: 25px;
+      }
+
+      .features__right a {
+        display: inline-block;
+        margin-top: 12px;
+        background-color: red;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+      }
+
+      .features__right a:hover {
+        background-color: steelblue;
+      }
+
+      .icon-box h3 {
+        color: #3e4555;
+        font-size: 26px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .icon-box i {
+        color: steelblue;
+      }
+
+      .section-title {
+        text-align: center;
+      }
+
+      .plan {
+        text-align: center;
+        padding: 5px;
+        width: 33.3%;
+        float: left;
+      }
+
+      .inner-plan {
+        /* her bir plan class'ı içine bir inner-plan class'ı ekledim.
+        plan class'ı nın rengini sayfa arka planıyla aynı yaptım
+        inner-plan arka plan rengini istediğim renk yaptım. bu sayede
+        planlar arası boşluk olmuş gibi görünüyor fakat birbirine yapışık
+        3 kutu var aslında. */
+
+        background: #edf577;
+        padding: 25px 10px;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .container {
+        margin: auto;
+        width: 1200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#">MovieApp</a>
+
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a href="#">Filmler</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Diziler</a>
+          </li>
+          <li class="main-nav__item main-nav__item--login">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+
+      <section id="how-it-works">
+        <div class="row">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            consequuntur? Atque est beatae officia maxime cumque. Reprehenderit
+            quis magni velit.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="icon-box col-3">
+            <i class="fa-solid fa-arrow-right-to-bracket fa-4x"></i>
+            <h3>Register</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Assumenda reprehenderit delectus quisquam ipsum, aut fugit odit
+              officia corrupti sequi commodi tempore laborum perspiciatis iure.
+              Molestiae itaque quia quis architecto voluptatibus.
+            </p>
+          </div>
+
+          <div class="icon-box col-3">
+            <i class="fa-brands fa-buffer fa-4x"></i>
+            <h3>Choose a Plan</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Assumenda reprehenderit delectus quisquam ipsum, aut fugit odit
+              officia corrupti sequi commodi tempore laborum perspiciatis iure.
+              Molestiae itaque quia quis architecto voluptatibus.
+            </p>
+          </div>
+
+          <div class="icon-box col-3">
+            <i class="fa-solid fa-face-smile-beam fa-4x"></i>
+            <h3>Enjoy Movify</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Assumenda reprehenderit delectus quisquam ipsum, aut fugit odit
+              officia corrupti sequi commodi tempore laborum perspiciatis iure.
+              Molestiae itaque quia quis architecto voluptatibus.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="row">
+          <div class="col-2 features__left"></div>
+          <div class="col-2 features__right">
+            <h3>Watch all Movies and TV Shows once they get released</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores cupiditate molestiae nisi? Dignissimos dicta voluptates
+              sint nisi non quia? Quaerat ex aliquid accusantium obcaecati
+              delectus repellendus error nulla qui provident.
+            </p>
+            <a href="#">View Features</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="plans">
+        <div class="row">
+          <h2 class="section-title">Become Premium Member</h2>
+          <div class="container clearfix">
+            <div class="plan">
+              <div class="inner-plan">
+                <h2>Free</h2>
+                <h3>0/Month</h3>
+                <ul>
+                  <li>HD Available</li>
+                  <li>Unlimited Movies and TV Shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>Screens you can watch</li>
+                  <li>First Month Free</li>
+                  <li>Download and Watch</li>
+                </ul>
+                <div>
+                  <button>Choose Plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="plan">
+              <div class="inner-plan">
+                <h2>Basic</h2>
+                <h3>9.99$/Month</h3>
+                <ul>
+                  <li>HD Available</li>
+                  <li>Unlimited Movies and TV Shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>Screens you can watch</li>
+                  <li>First Month Free</li>
+                  <li>Download and Watch</li>
+                </ul>
+                <div>
+                  <button>Choose Plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="plan">
+              <div class="inner-plan">
+                <h2>Premium</h2>
+                <h3>19.99$/Month</h3>
+                <ul>
+                  <li>HD Available</li>
+                  <li>Unlimited Movies and TV Shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>Screens you can watch</li>
+                  <li>First Month Free</li>
+                  <li>Download and Watch</li>
+                </ul>
+                <div>
+                  <button>Choose Plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

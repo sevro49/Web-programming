@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Positions</title>
+
+    <!--
+      * 5 tür position değeri vardır:
+      ! static (position kullanmasak bile default olan budur! top, bottom, left ve right etki etmez)
+
+      ! relative: nesne görünür ve var olmaya devam eder. Örn: 3 kutu içinden ortadaki kutuya
+      ! relative özelliği ve left 50px verirsek ortadaki kutu soldan 50 px hareket eder ve diğer
+      ! kutular yerinde sabit kalır
+
+      ! fixedÇ absolute ve sticky nin birleşimidir.
+
+      ! absolute: İçerik kadar yer kaplar. 3 kutudan ortadakine verirsek kutu yok olmuş sayılır. ortadaki kutunun boşluğu
+      ! yok olur. diğer kutular birleşir. kendisine en yakın block elemandan hizalanır.
+
+      ! sticky: relative ile aynı işi yapar fakat relative özelliğinde kutunun yeri sabitken sticky
+      ! özelliğinde nesne ekrana yapışmış görünür. ekranı kaydırsak bile ekranda kalmaya devam eder.
+
+     -->
+
+    <style>
+      html {
+        height: 2000px;
+        /* scrollbar çıkması için yaptık */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+      }
+
+      .box {
+        padding: 10px;
+        border: 5px solid #532a14;
+        margin-bottom: 10px;
+      }
+
+      .navbar {
+        background-color: rgb(124, 19, 19);
+      }
+      .content {
+        background-color: rgb(69, 42, 165);
+        /* sticky, fixed gibi hareket eder fakat her zaman ekranda durmaz.
+        içerik bittikten sonra kaybolur. */
+        position: sticky;
+        top: 100px;
+        /* top, bottom vs. verince konumu değişmez. hareket etmeye
+        başlayacağı noktayı ayarlamış oluruz. eleman olduğu yerde görünmeye
+        devam eder. */
+      }
+      .footer {
+        background-color: rgb(42, 165, 104);
+      }
+
+
+      .sticky{
+        position: sticky;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="p-tags">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        <h2 class="sticky" style="background-color: yellowgreen;">Lorem ipsum dolor sit amet.</h2>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+    </div>
+
+    <div class="box navbar">navbar</div>
+    <div class="box content">content</div>
+    <div class="box footer">footer</div>
+
+    <div class="p-tags">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        <h2 class="sticky" style="background-color: hotpink;">Lorem ipsum dolor sit amet.</h2>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+    </div>
+    <div class="p-tags">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+    </div>
+  </body>
+</html>

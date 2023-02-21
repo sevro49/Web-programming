@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Floating</title>
+
+    <!-- text-align, bir kutunun içindeki içeriğe
+    etki eder. inline ve inline-block olursa etki eder.
+
+    float, kutunun kendisine etki eder. block, inline, inline-block
+    olursa etki eder-->
+
+    <style>
+      #container {
+        background-color: rgb(6, 95, 95);
+      }
+
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        border: 2px solid black;
+        float: right;
+      }
+
+      .clearfix::after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="clearfix">
+      <div class="box" id="box1">kutu1</div>
+      <div class="box">kutu2</div>
+      <div class="box">kutu3</div>
+      <!-- <div style="clear: both;"></div> -->
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nobis
+      nemo animi sequi quisquam debitis quidem tempore deserunt hic deleniti,
+      necessitatibus tenetur libero harum dolores nisi earum alias laudantium
+      veniam?
+    </p>
+  </body>
+</html>

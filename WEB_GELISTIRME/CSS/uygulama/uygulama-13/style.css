@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* scroll to top button eklediğimizde smooth şekilde yukarı
+    çıkması için ekledim. */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+
+  /** 
+    * !Font kullanma 
+    */
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  margin-top: 65px; /* nav-bar'a pos. fixed uygulayınca nav-bar görünür
+    ama kapladığı alan yok gibi davranılır. sayfa yukarı kayar. engellemek için
+    main'i 65px aşağı kaydırdım.*/
+}
+
+.main-header {
+  background-color: steelblue;
+  padding: 8px 16px;
+  position: fixed;
+  z-index: 1; /* pos. fixed yapınca header arka plana atılır. öne çıkarmak için*/
+  width: 100%; /* pos. fixed yapınca genişlik küçülür. genişletmek için*/
+  top: 0;
+}
+
+.main-nav {
+  display: inline-block;
+  width: calc(100% - 85px);
+  text-align: right;
+}
+
+.main-nav__items {
+  margin: 0px;
+}
+
+.main-nav__item a:hover,
+.main-nav__item:hover::before {
+  color: darkblue;
+}
+
+.main-nav__item::before {
+  content: "\2022";
+  color: white;
+}
+
+.main-nav__item--login::before {
+  content: none;
+}
+
+.main-nav__item {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 5px;
+}
+
+#showcase {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0.365),
+      rgba(0, 0, 255, 0.182)
+    ),
+    url("bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#showcase h1 {
+  position: absolute;
+  /* absolute dersek body etiketinden, relative dersek h1'in içinde
+    bulunduğu en yakın kapsayıcı etiketten hizalama yaparız. bu durumda
+    en yakın kapsayıcı etiket #showcase div'idir
+    
+    eğer h1'e absolute verip #showcase e relative verirsem bu sefer
+    h1 #showcase e göre hizalanır. buna gerek kalmadan h1'e relative 
+    vererek de yapabilirim
+    */
+  top: 50%;
+  left: 50%;
+  margin: 0px;
+  color: white;
+  font-size: 45px;
+  background-color: rgba(0, 0, 0, 0.464);
+  transform: translate(-50%, -50%);
+  /* top, left vs. dersem yazının başladığı yerden %50 olur.
+    ben yazının ortasından %50 olsun istiyorum. bu yüzden
+    transform: translate(x, y) özelliğini kullanıyoruz. translate içine verdiğimiz
+    değer kadar hareket gerçekleşir. (10px, -10px) dersem 10px sağa, 10px aşağı gider 
+    (%50, %50) dersem yazının kapladığı alanın yarısı kadar sağa ve yukarı gider vs.*/
+}
+
+#showcase .content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 30px;
+  background: rgba(46, 76, 109, 0.3);
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+#how-it-works {
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.row {
+  margin-top: 40px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col-4 {
+  float: left;
+  width: 25%;
+}
+
+.col-3 {
+  float: left;
+  width: 33.3%;
+}
+
+.col-2 {
+  float: left;
+  width: 50%;
+}
+
+.features__left {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0.365),
+      rgba(0, 0, 255, 0.182)
+    ),
+    url("features.jpeg");
+  background-size: cover;
+  background-position: top center;
+}
+
+.features__right {
+  background-color: rgb(146, 171, 190);
+  padding: 40px;
+  vertical-align: top;
+}
+
+.features__left,
+.features__right {
+  height: 350px;
+}
+
+.features__right h3 {
+  font-size: 25px;
+}
+
+.icon-box h3 {
+  color: #3e4555;
+  font-size: 26px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon-box i {
+  color: steelblue;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #3e4555;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+.plan {
+  text-align: center;
+  padding: 5px;
+}
+
+.plan__badge {
+  background: #fff;
+  color: #3e4555;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.plan--featured {
+  position: relative;
+  top: -20px;
+}
+
+.recommended_plan {
+  color: #fff;
+  background-color: #fa3241 !important;
+  /* !important dersek dediğimiz renk baskın gelir ve diğer rengi ezer */
+}
+
+.inner-plan {
+  /* her bir plan class'ı içine bir inner-plan class'ı ekledim.
+    plan class'ı nın rengini sayfa arka planıyla aynı yaptım
+    inner-plan arka plan rengini istediğim renk yaptım. bu sayede
+    planlar arası boşluk olmuş gibi görünüyor fakat birbirine yapışık
+    3 kutu var aslında. */
+
+  background: #edf577;
+  padding: 25px 10px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+
+  /* hangi özelliğin kaç saniye içnde gerçekleşeceğine karar verir */
+  transition: box-shadow 0.2s;
+}
+
+.inner-plan:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.plan__features {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan__features li {
+  /* recommended plan'ı büyütmek için */
+  margin: 6px 8px;
+}
+
+.container {
+  margin: 0 auto;
+  /* ! planları genişletir 
+  width: 1200px; */
+  width: 1000px;
+}
+
+#backtotop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+#backtotop i {
+  color: rgb(70, 130, 180);
+  font-size: 45px;
+  transition: color 0.6s;
+}
+
+#backtotop i:hover {
+  color: #325d81;
+  font-size: 45px;
+}
+
+.counter {
+  background: linear-gradient(
+    to bottom,
+    rgb(70, 130, 180) 0%,
+    rgb(55, 110, 156) 100%
+  );
+  text-align: center;
+  padding: 50px;
+}
+
+.counter__item {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.counter h4 {
+  margin: 0px;
+  color: #fff;
+}
+
+.card-container {
+  /* padding bilgisini col-3 (card-container)'a verirsen
+  her bir kart arasını açarsın. .card'a verirsen fotoğraflar
+  arasını açarsın. yani fotolar küçülür. ana kart değil. */
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 10px 10px 40px rgba(52, 58, 64, 0.1);
+  /*position: relative;*/ /* görseli olduğu konumdan itibaren 
+  hizalamak için relative*/
+  /* top: 0; */
+  transition: all .3s; /* başlangıçta konum belirtmezsen transition işe yaramaz.*/
+}
+
+.card:hover {
+  /* top: -10px; 
+  ! top:0 ve position: relative ile bağlı*/
+
+  /* 
+  ! daha kolay!!!
+   */
+  transform: translateY(-10px); 
+
+}
+
+.card-image {
+  max-height: 350px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.img-fluid {
+  /* resmin içinde bulunduğu div e göre boyutu tamamen kaplasın */
+  width: 100%;
+}
+
+footer{
+  background-color: #325d81;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+footer a{
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+footer ul{
+  margin: 0;
+  padding: 0;
+
+}
+
+footer ul li{
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#social-links{
+  text-align: right;
+}
+
+.fab{
+  padding: 10px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+
+.fab:hover{
+  opacity: 0.7;
+}
+
+.fa-facebook{
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.fa-twitter{
+  background-color: #55acee;
+  color: #fff;
+}
+
+.fa-instagram{
+  background-color: #125688;
+  color: #fff;
+}

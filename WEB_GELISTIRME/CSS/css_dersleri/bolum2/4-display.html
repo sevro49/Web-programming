@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+
+    <style>
+      .box {
+        height: 60px;
+        width: 100px;
+        display: inline-block;
+
+        /*inline = içindeki içerik kadar yer kaplar
+        inline-block = yan yana getirir
+        block = alt alta getirir
+        */
+      }
+
+      #first {
+        background-color: rgb(255, 0, 0);
+      }
+
+      #second {
+        background-color: blue;
+        visibility: hidden;
+        /*display: none;    dersek öğeyi siler gibi yapar. bulunduğu yeri kaybeder
+        ve etrafındakileri birleştirir
+        
+        visibility: hidden;   dersek öğenin görünürlüğünü kapatır. 
+        öğe oradadır fakat görünmez, kapladığı alan durur*/
+      }
+
+      #third {
+        background-color: green;
+      }
+
+      a {
+        background-color: purple;
+        margin: 10px;
+        padding: 4px;
+        width: 60px;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box" id="first">First</div>
+      <div class="box" id="second">Second</div>
+      <div class="box" id="third">Third</div>
+    </div>
+
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">Contact</a>
+    </div>
+  </body>
+</html>

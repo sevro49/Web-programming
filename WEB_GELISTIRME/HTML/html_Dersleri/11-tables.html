@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+  </head>
+  <body>
+    <table
+      border="10"
+      width="50%"
+      cellpadding="10"
+      cellspacing="5"
+      bordercolor="blue"
+      align="center"
+    >
+      <!--tr = satır | td = kolon-->
+      <thead>
+        <tr>
+          <th>number</th>
+          <th>product</th>
+          <th>cost</th>
+          <th>pic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>iPhone11</td>
+          <td>7k</td>
+          <td>1.jpeg</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td rowspan="2">iPhone12</td>
+          <td>10k</td>
+          <td>2.jpeg</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <!-- <td>iPhone13</td> -->
+          <td colspan="2">15k - 3.jpeg</td>
+          <!-- <td></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

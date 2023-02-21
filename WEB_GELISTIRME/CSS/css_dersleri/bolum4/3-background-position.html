@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Position</title>
+
+    <style>
+
+      body {
+        margin: 0px;
+      }
+
+      #header {
+        position: relative;
+        /* background-image: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 0, 0.295),
+            rgba(255, 166, 0, 0.322),
+            rgba(255, 0, 0, 0.753)
+          ),
+          url("pexels-maxime-francis-2246476.jpg"); */
+        background: url("pexels-maxime-francis-2246476.jpg");
+        /* arka plana resim koymak yerine renk koymak istersen background
+        özelliğini yorum satırı yap. */
+        height: 100vh;
+        background-position: 100px 100px; /* 100px sağa kaydıırır, 100px aşağı kaydırır 
+        bottom dersek ekran daraltıldığında hep alt taraf görünür vs. */ 
+        background-repeat: no-repeat; /* sağa kaydırınca solda açılan boşlukta
+        resim tekrarlanır. tekrarlanan resmin tekrarlanmasını istemiyorsak kullanırız.*/
+        background-size: 800px 500px, cover; /* çerçeve boyutunu tanımlar. çerçeve içindeki
+        resmin poziyonunu da ilgili position özelliğiyle tanımlarız.*/
+      }
+
+      #header h1 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 80px;
+        color: rgb(98, 0, 255);
+      }
+
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Background Text</h1>
+      <img class="logo" src="SEVRO49-2.png" alt="" />
+    </div>
+  </body>
+</html>

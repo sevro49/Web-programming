@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uygulama floating</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      header,
+      footer {
+        padding: 15px;
+        color: yellowgreen;
+        background-color: purple;
+      }
+
+      .col {
+        float: left;
+        padding: 15px 15px 15px 0px;
+      }
+
+      .menu {
+        width: 25%;
+      }
+
+      .menu ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .menu li {
+        color: white;
+        padding: 8px;
+        margin-bottom: 8px;
+        background-color: rgb(62, 7, 114);
+      }
+
+      .menu li:hover {
+        cursor: pointer;
+        background-color: blueviolet;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .content {
+        width: 75%;
+      }
+
+      h1{
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Header</h2>
+    </header>
+
+    <main class="clearfix">
+      <div class="menu col">
+        <ul>
+          <li>Html</li>
+          <li>Css</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+
+      <div class="content col">
+        <h1>Komple Web Geliştirme Eğitimi</h1>
+
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui omnis,
+          eius nostrum inventore dolor voluptatum culpa obcaecati, magnam est
+          tempore aspernatur dolorem ratione tenetur corrupti iste, quod
+          impedit. Rem, sunt.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, neque
+          amet sed expedita porro ipsa nobis. Quo eligendi pariatur modi
+          accusantium et, neque quae facilis mollitia tenetur! Ipsa, praesentium
+          nulla?
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+  </body>
+</html>

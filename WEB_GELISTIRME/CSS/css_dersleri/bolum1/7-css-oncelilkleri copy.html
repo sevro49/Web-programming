@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS oncelikleri</title>
+
+    <style>
+      /*  inline css > id > class > tag > browser default */
+      h1 {
+        color: red;
+      }
+
+      #page-title {
+        border-bottom: 2px solid green;
+        color: blue;
+      }
+
+      .text-white {
+        color: orange;
+      }
+
+      h1 {
+        color: pink;
+      }
+
+      h1 {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <!-- bir elemanı birden fazla class içine koyabiliriz.  -->
+        <h1 id="page-title" class="text-white">Welcome to MovieApp</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+          rem?
+        </p>
+      </section>
+
+      <section>
+        <h2 id="page-subtitle" class="text-white">How it works?</h2>
+      </section>
+    </main>
+  </body>
+</html>

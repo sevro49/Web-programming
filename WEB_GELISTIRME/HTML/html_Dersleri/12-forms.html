@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="register.php">
+      <div>
+        <label for="name">Adınız: </label>
+        <input type="text" id="name" />
+      </div>
+
+      <div>
+        <label for="surname">Soyadınız: </label>
+        <input type="text" id="surname" />
+      </div>
+
+      <div>
+        <p>en sevdiğin programlama dili?</p>
+
+        <input type="radio" id="html" name="programlama" />
+        <label for="html">HTML</label>
+
+        <input type="radio" id="css" name="programlama" />
+        <label for="css">CSS</label>
+
+        <input type="radio" id="python" name="programlama" />
+        <label for="python">Python</label>
+
+        <input type="radio" id="java" name="programlama" />
+        <label for="java">Java</label>
+      </div>
+
+      <div>
+        <label for="intro">kendini anlat</label>
+        <textarea name="" id="intro" cols="30" rows="10"></textarea>
+      </div>
+
+      <div>
+        <p>en sevdiğin yemekler</p>
+
+        <input type="checkbox" id="karnıyarık" name="programlama" />
+        <label for="karnıyarık">Karnıyarık</label>
+
+        <input type="checkbox" id="mantı" name="programlama" />
+        <label for="mantı">Mantı</label>
+
+        <input type="checkbox" id="pizza" name="programlama" />
+        <label for="pizza">Pizza</label>
+
+        <input type="checkbox" id="burger" name="programlama" />
+        <label for="burger">Burger</label>
+      </div>
+
+      <div>
+        <label for="cities">Şehir</label>
+        <select id="cities">
+          <option value="41">Kocaeli</option>
+          <option value="34">İstanbul</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+      </div>
+
+      <div>
+        <label for="birthday">Birthday</label>
+        <input
+          type="date"
+          id="birthday"
+          name="birthday"
+          min="2000-12-31"
+          max="2030-12-31"
+        />
+      </div>
+
+      <div>
+        <p>en sevdiğin renk</p>
+
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color" />
+      </div>
+
+      <div>
+        <label for="dosya">Dosya Seç</label>
+        <input type="file" name="dosya" id="dosya" />
+      </div>
+
+      <div>
+        <button type="submit">Kaydet</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>

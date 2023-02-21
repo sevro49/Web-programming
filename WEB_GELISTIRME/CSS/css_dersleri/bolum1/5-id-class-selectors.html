@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline CSS</title>
+
+    <style>
+      .f20 {
+        font-size: 20px;
+      }
+
+      .f35 {
+        font-size: 35px;
+      }
+      section {
+        background-color: cadetblue;
+      }
+
+      #page-title {
+        border: 2px solid rgb(228, 24, 24);
+      }
+
+      #page-subtitle {
+        text-align: center;
+        border: 5px solid blue;
+      }
+
+      .text-white {
+        color: slateblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <!-- bir elemanı birden fazla class içine koyabiliriz.  -->
+        <h1 id="page-title" class="text-white f20">Welcome to MovieApp</h1>
+      </section>
+
+      <section>
+        <h2 id="page-subtitle" class="text-white f35">How it works?</h2>
+      </section>
+    </main>
+  </body>
+</html>

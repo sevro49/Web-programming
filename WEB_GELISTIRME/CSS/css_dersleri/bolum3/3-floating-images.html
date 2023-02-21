@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Images</title>
+
+    <!-- text-align, bir kutunun içindeki içeriğe
+    etki eder. inline ve inline-block olursa etki eder.
+
+    float, kutunun kendisine etki eder. block, inline, inline-block
+    olursa etki eder-->
+
+    <style>
+      p {
+        border: 2px solid black;
+        padding: 5px;
+      }
+
+      img {
+        width: 300px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      .clearfix::after {
+        /* clearfix in etkisini görmek için p etiketine border ekle */
+
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et maxime
+      commodi id ut sapiente libero accusantium est odio corrupti provident
+      assumenda ea fugiat excepturi voluptas, alias, omnis sunt. Quod, quisquam.
+    </p>
+
+    <p class="clearfix">
+      <img src="712390.jpg" alt="" />
+      <span>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi facere
+        totam quia. Fugit commodi totam illo facere quos quibusdam accusantium
+        corrupti tenetur, eligendi officia minima. Saepe porro distinctio amet
+        consectetur.
+      </span>
+
+      <span>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi facere
+        totam quia. Fugit commodi totam illo facere quos quibusdam accusantium
+        corrupti tenetur, eligendi officia minima. Saepe porro distinctio amet
+        consectetur.
+      </span>
+
+      <span>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi facere
+        totam quia. Fugit commodi totam illo facere quos quibusdam accusantium
+        corrupti tenetur, eligendi officia minima. Saepe porro distinctio amet
+        consectetur.
+      </span>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0px;
+      }
+      #showcase {
+        color: #ffea11;
+        background-color: #355764;
+        height: 500px;
+        width: 100%;
+        padding: 10px;
+
+        /* width'i 100% yaptığımız zaman satırın tamamını kaplar. 
+        padding ve border eklersek satırın tamamını kaplamasının üstüne eklenir ve ekrana tam olarak sığmaz.
+        örneğin padding 10px ve border 5 px verilmiştir. her iki taraftan da ekleneceği için toplamda 30px
+        bir alan taşmıştır. bunun önüne geçmek için box-sizing kullanırız. box-sizing, padding ve border'ı hesaba katarak 100% değerini alır.*/
+      }
+
+      #how-it-works {
+        background-color: #5a8f7b;
+        color: #ffea11;
+        padding: 10px;
+      }
+
+      .main-header {
+        background-color: #5a8f7b;
+      }
+
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 74px);
+        /*inline block dediğimiz için sadece içerik kadar yer kapladı.
+        fakat bu sefer de sağa yaslayamıyoruz. bunun için nav elemanının tüm satırı
+        kaplaması gerekiyor. bunu da width değerini %li yaparak ulaşabiliriz.
+        
+        width değerini % li yaparsak bu sefer de sayfayı genişletip küçülttüğümüz zaman 
+        yeri değişir. bunun önüne geçmek için calc() metodunu kullanıyoruz.
+        calc(100% - movieapp kapladığı alan)*/
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#">MovieApp</a>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Movies</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1 id="h1">Welcome to MovieApp</h1>
+      </section>
+
+      <section id="how-it-works">
+        <h2>How it works?</h2>
+      </section>
+    </main>
+  </body>
+</html>

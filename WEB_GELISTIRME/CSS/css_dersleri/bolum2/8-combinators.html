@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators</title>
+
+    <style>
+      div p {
+        color: aqua;
+      }
+
+      divv > p {
+        color: red;
+      }
+
+      divvv + p {
+        background-color: orange;
+      }
+
+      divvvv ~ p {
+        background-color: turquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  Combinators -->
+
+    <!--  Descendant selector () 
+    bir etiket altındaki TORUN etiketleri seçmek için kullanılır-->
+    <p>1. paragraf</p>
+    <div>
+      <p>2. paragraf</p>
+      <nav>
+        <p>3. paragraf</p>
+      </nav>
+    </div>
+    <p>4. paragraf</p>
+
+    <p>---------------------</p>
+    <!-- Child selector (>) 
+    bir etiket altındaki ÇOCUK etiketleri seçmeye yarar-->
+
+    <p>5. paragraf</p>
+    <divv>
+      <p>6. paragraf</p>
+      <nav>
+        <p>7. paragraf</p>
+      </nav>
+    </divv>
+    <p>8. paragraf</p>
+
+    <p>---------------------</p>
+    <!--  Adjacent Sibling Selector (+) 
+    bir etiketten sonra gelen İLK etiketi-->
+
+    <p>9. paragraf</p>
+    <divvv>
+      <p>10. paragraf</p>
+      <nav>
+        <p>11. paragraf</p>
+      </nav>
+    </divvv>
+    <p>12. paragraf</p>
+    <p>13. paragraf</p>
+
+    <p>---------------------</p>
+    <!--  General Sibling Selector (~) 
+    bir etiketten sonra gelen BÜTÜN etiketleri seçmeye yarar-->
+
+    <p>9. paragraf</p>
+    <divvvv>
+      <p>10. paragraf</p>
+      <nav>
+        <p>11. paragraf</p>
+      </nav>
+    </divvvv>
+    <p>12. paragraf</p>
+    <p>13. paragraf</p>
+  </body>
+</html>

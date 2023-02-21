@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deneme</title>
+    <script
+      src="https://kit.fontawesome.com/7b47ec1b74.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0px;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .main-header {
+        background-color: hotpink;
+        padding: 5px;
+      }
+
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 73px);
+      }
+
+      .main-nav__items {
+        margin: 0px;
+        text-align: right;
+      }
+
+      .main-nav__item::before {
+        content: "\2022";
+        color: white;
+      }
+
+      .main-nav__item {
+        display: inline-block;
+        padding: 20px 0px;
+        margin-left: 15px;
+      }
+
+      .main-nav__item a:hover,
+      .main-nav__item:hover::before {
+        color: black;
+      }
+
+      .main-nav__item a {
+        color: white;
+      }
+
+      .main-nav__item .btn {
+        color: white;
+        border: 2px solid;
+        padding: 9px;
+        border-radius: 20px;
+        background-color: black;
+      }
+
+      .main-nav__item--login::before {
+        content: none;
+      }
+
+      .main-nav__item .btn:hover {
+        color: black;
+        background-color: white;
+      }
+
+      #showcase {
+        background-color: red;
+        width: 100%;
+        height: 400px;
+        padding: 10px;
+      }
+
+      #how-it-works {
+        padding: 10px;
+        background-color: yellowgreen;
+      }
+
+      #how-it-works h2 {
+        text-align: center;
+        font-size: 40px;
+        color: royalblue;
+      }
+
+      #how-it-works h3 {
+        font-size: 23px;
+        color: white;
+      }
+
+      .icon-box {
+        display: inline-block;
+        width: 33%;
+        padding: 4px;
+        text-align: center;
+      }
+
+      .icon-box i {
+        color: purple;
+      }
+
+      .col-2 {
+        display: inline-block;
+        width: calc(50% - 2px);
+        height: 350px;
+      }
+      .features__left {
+        background: url("features.jpeg");
+        background-size: cover;
+      }
+
+      .features__right {
+        background-color: aqua;
+        padding: 40px;
+        vertical-align: top;
+      }
+
+      .features__right h3 {
+        font-size: 25px;
+      }
+
+      .features__right a{
+        background-color: black;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .features__right a:hover{
+        background-color: brown;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#"> MovieApp</a>
+
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a href="#">Filmler</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Diziler</a>
+          </li>
+          <li class="main-nav__item main-nav__item--login">
+            <a class="btn btn-primary" href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to MovieApp</h1>
+      </section>
+
+      <section id="how-it-works">
+        <div class="row">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident
+            nisi beatae incidunt obcaecati, dolor temporibus nam vitae deserunt
+            sit est, alias odit, error illum culpa harum architecto veritatis
+            assumenda atque.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="icon-box col-3">
+            <i class="fa-solid fa-shield-halved fa-4x"></i>
+            <h3>Register</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+              quidem blanditiis asperiores, optio ducimus similique assumenda
+              vel corrupti earum cum tenetur sit illum odio perferendis
+              expedita, ex quo commodi tempore.
+            </p>
+          </div>
+
+          <div class="icon-box col-3">
+            <i class="fa-solid fa-sitemap fa-4x"></i>
+            <h3>Choose a Plan</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+              quidem blanditiis asperiores, optio ducimus similique assumenda
+              vel corrupti earum cum tenetur sit illum odio perferendis
+              expedita, ex quo commodi tempore.
+            </p>
+          </div>
+
+          <div class="icon-box col-3">
+            <i class="fa-solid fa-keyboard fa-4x"></i>
+            <h3>Enjoy Movify</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+              quidem blanditiis asperiores, optio ducimus similique assumenda
+              vel corrupti earum cum tenetur sit illum odio perferendis
+              expedita, ex quo commodi tempore.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="row">
+          <div class="col-2 features__left"></div>
+          <div class="col-2 features__right">
+            <h3>Watch all Movies and TV Shows once they get released</h3>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Asperiores magni voluptatibus in possimus modi iure nisi pariatur
+              minus laboriosam, nulla beatae soluta unde! Deleniti consequuntur
+              asperiores, molestias beatae reiciendis provident!
+            </p>
+            <a class="btn btn-secondary" href="#">View Features</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

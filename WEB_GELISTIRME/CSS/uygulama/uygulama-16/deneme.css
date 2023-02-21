@@ -1,0 +1,6 @@
+@media (min-width: 576px){
+  .container{
+    margin: 0 auto;
+    width: 540px;
+  }
+}

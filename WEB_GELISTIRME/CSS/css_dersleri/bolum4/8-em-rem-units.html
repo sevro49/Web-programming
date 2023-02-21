@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Em Rem Units</title>
+
+    <style>
+
+      html {
+        font-size: 10px;
+      }
+
+      body{
+        font-size: 1.5rem;
+      }
+
+      @media (min-width: 576px) {
+        /* [576px, 767px] arasında etkin olur */
+
+        html {
+          font-size: 11px;
+        }
+
+        #kutu-1 h2{
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        /* [576px, 767px] arasında etkin olur */
+
+        html {
+          font-size: 12px;
+        }
+      }
+
+      /* 
+        em kullanırsan içinde bulunduğu en yakın
+        kapsayıcı elemana göre hareket eder.
+        
+        rem kullanırsan root elemana göre hareket eder.
+        (bu durumda html elementi).
+        
+        default olarak html font size'i 16px'dir.
+        elemanların boyutlarını rem olarak verirsem
+        responsive tasarım için sadece html elemanının
+        font boyutunu değiştirmem yeterli olur
+        */
+
+      /* #kutu-1 p {
+        font-size: 2rem;
+      }
+
+      #kutu-1 h2 {
+        font-size: 3rem;
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="kutu-1">
+      <h2>Lorem, ipsum dolor.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nam
+        quibusdam adipisci, id omnis, tempora nostrum, sit animi est aspernatur
+        eaque laboriosam qui. Iusto, illo illum saepe inventore a autem!
+      </p>
+    </div>
+
+    <div id="kutu-2">
+      <h3>Lorem, ipsum dolor.</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nam
+        quibusdam adipisci, id omnis, tempora nostrum, sit animi est aspernatur
+        eaque laboriosam qui. Iusto, illo illum saepe inventore a autem!
+      </p>
+    </div>
+  </body>
+</html>

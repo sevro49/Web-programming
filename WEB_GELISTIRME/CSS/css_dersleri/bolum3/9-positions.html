@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positions</title>
+
+    <!-- 
+      * 5 tür position değeri vardır:
+      ! static (position kullanmasak bile default olan budur! top, bottom, left ve right etki etmez)
+
+      ! relative: nesne görünür ve var olmaya devam eder. Örn: 3 kutu içinden ortadaki kutuya
+      ! relative özelliği ve left 50px verirsek ortadaki kutu soldan 50 px hareket eder ve diğer
+      ! kutular yerinde sabit kalır
+      
+      ! fixed: absolute ve sticky nin birleşimidir.
+
+      ! absolute: İçerik kadar yer kaplar. 3 kutudan ortadakine verirsek kutu yok olmuş sayılır. ortadaki kutunun boşluğu
+      ! yok olur. diğer kutular birleşir. kendisine en yakın block elemandan hizalanır.
+
+      ! sticky: relative ile aynı işi yapar fakat relative özelliğinde kutunun yeri sabitken sticky
+      ! özelliğinde nesne ekrana yapışmış görünür. ekranı kaydırsak bile ekranda kalmaya devam eder.
+
+      
+     -->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+      }
+
+      #container1 {
+        margin-top: 100px;
+
+        /* kapsayıcı eleman (burada #container1) relative olmazsa body ye göre hareket eder.
+        kapysayıcı eleman relative olursa kapsayıcı elamana göre hareket eder içindekiler */
+        position: relative;
+      }
+
+      .box {
+        padding: 10px;
+        border: 5px solid #532a14;
+        margin-bottom: 10px;
+      }
+
+      .navbar {
+        background-color: rgb(124, 19, 19);
+
+        /* position: absolute olursa diğer kutuyu mıknatıs gibi çeker */
+        position: relative;
+      }
+      .content {
+        background-color: rgb(69, 42, 165);
+
+        /* position: static default olandır */
+        position: absolute;
+        /* absolute dersek sadece içerik kadar yer kaplar.
+        bunun önüne geçmek için width: 100% yapabiliriz */
+        width: 45%;
+        top: 0;
+        left: 50px;
+      }
+      .footer {
+        background-color: rgb(42, 165, 104);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container1">
+      <div class="box navbar">navbar</div>
+      <div class="box content">content</div>
+      <div class="box footer">footer</div>
+    </div>
+    <div class="p-tags">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet neque
+        in voluptate obcaecati labore blanditiis maiores aut architecto
+        voluptatibus consectetur et quae praesentium minus, deleniti pariatur.
+        Explicabo corporis ipsum fugit!
+      </p>
+    </div>
+  </body>
+</html>
