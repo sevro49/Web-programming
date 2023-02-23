@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        padding: 100px;
+      }
+
+      
+    </style>
+    <title>Spacing</title>
+  </head>
+  <body>
+    
+    <!-- 
+      margin- padding => {property}{sides}-{size}
+    
+      {property} => 
+        m: margin
+        p: padding
+
+      {sides} => 
+        t: top,
+        b: bottom
+        s: start(left)
+        e: end(right)
+        x: right ve left (ikisine de aynı anda değer verir)
+        y: top ve bottom (ikisine de aynı anda değer verir)
+
+      {size} =>
+        0: mt-0 => margin-top: 0
+        1: mt-1 => $spacer * 0.25
+        2: mt-2 => $spacer * 0.5
+        3: mt-3 => $spacer
+        4: mt-4 => $spacer * 1.5
+        5: mt-5 => $spacer * 3
+        auto:
+
+    -->
+
+
+    <div class="bg-primary p-3">Lorem, ipsum.</div>
+    <div class="bg-primary p-4 mt-3">Lorem, ipsum.</div>
+
+    <br><br>
+
+    <div class="bg-primary p-3 mb-3">Lorem, ipsum.</div>
+    <div class="bg-primary p-4">Lorem, ipsum.</div>
+
+    <br><br>
+    
+    <div class="bg-success p-4 mt-3 mx-auto" style="width: 200px;">Lorem, ipsum.</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
