@@ -33,21 +33,21 @@
                     data-bs-toggle="collapse"
                     data-bs-target="#mobile"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span navbar-toggler-icon></span>
                 </button>
 
                 <div id="mobile" class="collapse navbar-collapse">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link">Home</a>
+                            <a href="index.html" class="nav-link active"
+                                >Home</a
+                            >
                         </li>
                         <li class="nav-item">
                             <a href="index.html" class="nav-link">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active"
-                                >Contact</a
-                            >
+                            <a href="index.html" class="nav-link">Contact</a>
                         </li>
                     </ul>
 
@@ -57,7 +57,8 @@
                             class="form-control me-1"
                             placeholder="Search"
                         />
-                        <button class="btn btn-warning">
+
+                        <button class="btn btn-success">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
@@ -65,100 +66,8 @@
             </div>
         </nav>
 
-        <main>
-            <div class="container my-4">
-                <h2 class="my-3">Contact Us</h2>
-                <div class="row g-2">
-                    <div class="col-md-6">
-                        <div class="card bg-dark">
-                            <div class="card-body">
-                                <div class="alert alert-warning">
-                                    Please fill out the form
-                                </div>
-                                <form class="row g-3 text-white">
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label"
-                                            >Email</label
-                                        >
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            id="email"
-                                            class="form-control"
-                                        />
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="name" class="form-label"
-                                            >Name</label
-                                        >
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            id="name"
-                                            class="form-control"
-                                        />
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="phone" class="form-label"
-                                            >Phone</label
-                                        >
-                                        <input
-                                            type="text"
-                                            name="phone"
-                                            id="phone"
-                                            class="form-control"
-                                        />
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="subject" class="form-label"
-                                            >Subject</label
-                                        >
-                                        <input
-                                            type="text"
-                                            name="subject"
-                                            id="subject"
-                                            class="form-control"
-                                        />
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="message" class="form-label"
-                                            >Message</label
-                                        >
-                                        <textarea
-                                            name="message"
-                                            id="email"
-                                            class="form-control"
-                                        ></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button
-                                            class="btn btn-outline-warning"
-                                            style="width: 100%"
-                                        >
-                                            Send Message
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
 
-
-                    <div class="col-md-6">
-                        <iframe
-                            id="map"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96384.3499035982!2d28.993013318801815!3d40.98124140050297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac790b17ba89d%3A0xd2d24ea0437a7ee2!2zS2FkxLFrw7Z5L8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1677504478021!5m2!1str!2str"
-                            width="100%"
-                            style="border: 0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
-                    </div>
-                </div>
-            </div>
-        </main>
-
+        
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
             integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
