@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Deneme</title>
+        <title>Image Gallery</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -19,65 +19,54 @@
                 text-align: center;
             }
 
-            .gallery{
+            .gallery {
                 display: flex;
                 flex-wrap: wrap;
             }
 
-            .gallery div{
+            .gallery div {
                 flex-grow: 1;
                 margin: 3px;
                 overflow: hidden;
             }
-            
-            img{
+
+            img {
                 width: 100%;
                 height: 100%;
                 transition: transform 0.3s ease-out;
                 object-fit: cover;
             }
 
-            img:hover{
+            img:hover {
                 transform: scale(1.2);
             }
         </style>
-
-        
     </head>
     <body>
-
         <h1>Image Gallery</h1>
 
         <div class="gallery">
             <div>
-                <img src="https://picsum.photos/200/300?random=2">
+                <img src="https://picsum.photos/300/200?random=1" />
             </div>
             <div>
-                <img src="https://picsum.photos/300/400?random=3">
+                <img src="https://picsum.photos/500/300?random=2" />
             </div>
             <div>
-                <img src="https://picsum.photos/500/300?random=1">
+                <img src="https://picsum.photos/300/300?random=3" />
             </div>
             <div>
-                <img src="https://picsum.photos/200/200?random=4">
+                <img src="https://picsum.photos/500/500?random=4" />
             </div>
             <div>
-                <img src="https://picsum.photos/250/300?random=5">
-            </div>
-
-            <div>
-                <img src="https://picsum.photos/200/300?random=6">
+                <img src="https://picsum.photos/300/300?random=5" />
             </div>
             <div>
-                <img src="https://picsum.photos/400/300?random=7">
+                <img src="https://picsum.photos/300/400?random=6" />
             </div>
             <div>
-                <img src="https://picsum.photos/200/400?random=8">
-            </div>
-            <div>
-                <img src="https://picsum.photos/200/300?random=9">
+                <img src="https://picsum.photos/300/300?random=7" />
             </div>
         </div>
-        
     </body>
 </html>
