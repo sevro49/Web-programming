@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Deneme</title>
+        <title>Flex Navbar</title>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -28,6 +28,7 @@
                 text-decoration: none;
                 font-size: 20px;
                 align-self: center;
+                padding: 10px;
             }
 
             .navigation {
@@ -55,7 +56,6 @@
                 }
 
                 nav a{
-                    padding: 10px;
                     align-self: flex-start;
                 }
 
@@ -71,18 +71,18 @@
                 }
 
                 .navigation li:last-child {
+                    display: block;
                     position: absolute;
                     top: 0;
                     right: 10px;
-                    display: block;
                 }
 
-                .navigation li a:last-child {
-                    border-bottom: none;
-                }
-
-                .responsive .navigation li:not(:last-child) {
+                .responsive .navigation li:not(:last-child){
                     display: none;
+                }
+
+                .navigation li:last-child a {
+                    border-bottom: none;
                 }
             }
         </style>
@@ -109,7 +109,7 @@
             nav.addEventListener("click", (e) => {
                 nav.classList.toggle("responsive");
                 e.preventDefault();
-            })
+            });
         </script>
     </body>
 </html>
