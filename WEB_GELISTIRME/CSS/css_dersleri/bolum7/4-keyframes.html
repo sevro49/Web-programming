@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>keyframes</title>
+
+        <style>
+            body {
+                background-color: #333;
+            }
+
+            .box {
+                background-color: yellow;
+                width: 150px;
+                height: 150px;
+
+                position: relative;
+                top: 0px;
+                left: 0px;
+                /* animation:  a1 5s forwards infinite ease-in; */
+                animation: a1 5s forwards ease-in;
+            }
+
+            @keyframes a1 {
+                25%{
+                    top: 100px;
+                    left: 0;
+                    background-color: aqua;
+                }
+
+                50%{
+                    top: 100px;
+                    left: 100px;
+                    background-color: goldenrod;
+                }
+
+                75%{
+                    top: 200px;
+                    left: 100px;
+                    background-color: brown;
+                }
+
+                100%{
+                    top: 300px;
+                    left: 200px;
+                    background-color: cadetblue;
+                }
+            }
+
+            h1{
+                position: relative;
+                animation: text_animation 2s forwards ease-in;
+                color: #fff;
+            }
+
+            @keyframes text_animation{
+                from{
+                    top: -200px;
+                }
+                to{
+                    top: 100px;
+                }
+            }
+
+            h2{
+                position: relative;
+                color: #fff;
+                animation: text_animation2 3s forwards ease-out;
+            }
+
+            @keyframes text_animation2{
+                from{
+                    top: 200px;
+                }
+                to{
+                    top: 500px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lorem, ipsum dolor.</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <div class="box"></div>
+    </body>
+</html>
